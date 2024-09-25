@@ -3,10 +3,12 @@
 
 import axios from "axios";
 
+
 const getAnimeResponse = async ({ resource, query }) => {
+  const baseURL = "https://api.jikan.moe/v4";
   try {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/${resource}?q=${query}`);
-    const anime = await response.json();
+    const response = await axios.get(`${baseURL}/${resource}?q=${query}`);
+    const anime = response.data;
     return anime;
   } catch (error) {
     console.error("Error fetching anime data:", error);

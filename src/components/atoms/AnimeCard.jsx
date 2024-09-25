@@ -5,7 +5,7 @@
 const AnimeCard = ({title, animeStatus, episode, image, rating, season, year}) => {
 
     return (
-        <div className="flex flex-col bg-secondaryDark w-[350px] h-[300px]">
+        <div className="flex flex-col rounded-md hover:shadow-lg bg-secondaryDark w-[350px] h-[300px]">
             
 
         </div>
